@@ -13,8 +13,7 @@ for (let i = 0; i < input.length; i++) {
     const numberOfMatches = [...ourNumbers].reduce((count, num) => winningNumbers.has(num) ? count + 1 : count, 0);
 
     for (let j = 1; j <= numberOfMatches; j++) {
-        const current = amountOfCardsArray[i+j];
-        amountOfCardsArray[i+j] = current + amountOfCardsArray[i];
+        amountOfCardsArray[i+j] = amountOfCardsArray[i+j] + amountOfCardsArray[i];
     }
 }
 
